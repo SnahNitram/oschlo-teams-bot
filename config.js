@@ -1,8 +1,8 @@
 const config = {
-  MicrosoftAppId: process.env.BOT_ID,
-  MicrosoftAppType: process.env.BOT_TYPE,
-  MicrosoftAppTenantId: process.env.BOT_TENANT_ID,
-  MicrosoftAppPassword: process.env.BOT_PASSWORD,
+  MicrosoftAppId: process.env.MICROSOFT_APP_ID,
+  MicrosoftAppPassword: process.env.MICROSOFT_APP_PASSWORD,
+  MicrosoftAppType: "MultiTenant",  // Since we set this in Azure
+  MicrosoftAppTenantId: process.env.TEAMS_APP_TENANT_ID || "",  // Optional for multi-tenant
 };
 
 module.exports = config;
