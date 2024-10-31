@@ -1,0 +1,47 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.17",
+    "version": "1.0.0",
+    "id": "52b262af-8dde-4538-9a6d-72a1ce96b57c",
+    "developer": {
+        "name": "Oschlo AS",
+        "websiteUrl": "https://oschlo.ai",
+        "privacyUrl": "https://oschlo.ai/privacy",
+        "termsOfUseUrl": "https://oschlo.ai/terms"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Oschlo Bot",
+        "full": "Oschlo AI Assistant"
+    },
+    "description": {
+        "short": "AI assistant powered by Flowise",
+        "full": "An AI assistant that helps answer questions and provide support using Flowise technology."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "0e83c0b9-5fb0-45f0-8f49-7e6aec52c88f",
+            "scopes": [
+                "personal",
+                "team",
+                "groupChat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "oschlo-teams-bot.onrender.com"
+    ]
+}
