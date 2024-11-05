@@ -8,6 +8,8 @@ env/.env.testtool
 .notification.localstore.json
 .notification.testtoolstore.json
 appPackage/build
+appPackage/manifest.olalompa.json
+appPackage/manifest.prod.json
 
 # dependencies
 node_modules/

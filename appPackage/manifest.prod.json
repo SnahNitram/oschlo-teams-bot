@@ -1,25 +1,25 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
     "manifestVersion": "1.17",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "id": "52b262af-8dde-4538-9a6d-72a1ce96b57c",
     "developer": {
         "name": "Oschlo AS",
-        "websiteUrl": "https://oschlo.ai",
-        "privacyUrl": "https://oschlo.ai/privacy",
-        "termsOfUseUrl": "https://oschlo.ai/terms"
+        "websiteUrl": "https://oschlo.co",
+        "privacyUrl": "https://oschlo.co/privacy",
+        "termsOfUseUrl": "https://oschlo.co/terms"
     },
     "icons": {
         "color": "color.png",
         "outline": "outline.png"
     },
     "name": {
-        "short": "Oschlo Bot",
-        "full": "Oschlo AI Assistant"
+        "short": "Personalhåndboken",
+        "full": "Personalhåndboken fra Oschlo AI"
     },
     "description": {
-        "short": "AI assistant powered by Flowise",
-        "full": "An AI assistant that helps answer questions and provide support using Flowise technology."
+        "short": "Snakk med Personalhåndboken",
+        "full": "En AI assistent som svarer på spørsmål om personalhåndboken."
     },
     "accentColor": "#FFFFFF",
     "bots": [

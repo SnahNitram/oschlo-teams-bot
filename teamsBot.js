@@ -159,14 +159,37 @@ class TeamsBot extends TeamsActivityHandler {
       const membersAdded = context.activity.membersAdded;
       for (let cnt = 0; cnt < membersAdded.length; cnt++) {
         if (membersAdded[cnt].id) {
-          await context.sendActivity(
-            `Hello! I'm your Flowise assistant. How can I help you today?`
+          // Instead, make an initial call to Flowise to get the welcome message
+          const welcomeResponse = await this.flowiseAPI.sendMessageAndWaitForResponse(
+              "", // Empty message to trigger welcome message
+              context.activity.conversation.id,
+              {
+                  isFirstMessage: true // Add a flag to indicate this is the initial message
+              }
           );
+          
+          if (welcomeResponse && welcomeResponse.text) {
+              await context.sendActivity(welcomeResponse.text);
+          }
           break;
         }
       }
       await next();
     });
+  }
+
+  async handleTeamsMessagesAsync(context, next) {
+    // Only send to Flowise if this is a user message (not the initial welcome)
+    if (context.activity.text) {
+        await this.flowiseAPI.sendMessageAndWaitForResponse(
+            context.activity.text, 
+            context.activity.conversation.id,
+            {
+                skipWelcomeMessage: true // Add flag to skip welcome message for regular messages
+            }
+        );
+    }
+    await next();
   }
 }
 
